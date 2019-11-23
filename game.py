@@ -20,7 +20,7 @@ heigth = 1080
 
 win = pygame.display.set_mode((width, heigth))
 screen = pygame.display.set_caption("My Awesome Game")
-bg = pygame.image.load("bg.png")
+bg = pygame.image.load("bg1Art.png")
 
 K = Keyboard()
 G = Ground()
