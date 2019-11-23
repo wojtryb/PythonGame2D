@@ -4,6 +4,7 @@ from Keyboard import Keyboard
 from Ground import Ground
 
 def myUpdate(P, G):
+	
 	P.checkStaticFriction()
 	P.countX()
 	P.countY()
@@ -14,8 +15,12 @@ def myUpdate(P, G):
 
 pygame.init()
 
-win = pygame.display.set_mode((1920, 1080))
-pygame.display.set_caption("My Awesome Game")
+width = 1920
+heigth = 1080
+
+win = pygame.display.set_mode((width, heigth))
+screen = pygame.display.set_caption("My Awesome Game")
+bg = pygame.image.load("bg.png")
 
 K = Keyboard()
 G = Ground()
@@ -36,6 +41,8 @@ while run:
 	#print(P.onFloor)
 	
 	win.fill((0, 0, 0))
+	win.blit(bg, [0, 0]) #BACKGROUND - comment to get better performance
+
 	P.render(win)
 	pygame.display.update()
 

@@ -4,7 +4,7 @@ class Ground:
 
 	def __init__(s):
 		s.function = [-0.001, 2.15, -200]
-		#s.function = [-0.6, 1100]
+		# s.function = [-0.6, 1100]
 		s.countDiff()
 
 		s.angle = 0

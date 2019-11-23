@@ -113,4 +113,5 @@ class Player:
 			s.y = heigth
 
 	def render(s, win):
-		pygame.draw.rect(win, (0, 255, 0), (s.x, s.y, s.w, s.h))
+		# pygame.draw.rect(win, (0, 255, 0), (s.x, s.y, s.w, s.h))
+		pygame.draw.rect(win, (0, 255, 0), (s.x-s.w/2, s.y-s.h, s.w, s.h))
