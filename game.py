@@ -1,4 +1,6 @@
 import pygame
+import os
+
 from Player import Player
 from Keyboard import Keyboard
 from Ground import Ground
@@ -20,7 +22,8 @@ heigth = 1080
 
 win = pygame.display.set_mode((width, heigth))
 screen = pygame.display.set_caption("My Awesome Game")
-bg = pygame.image.load("bg1Art.png")
+bg = pygame.image.load(os.path.join(os.getcwd(), "Assets", "bg1Art.png"))
+#bg = pygame.image.load(".Assets/bg1Art.png")
 
 K = Keyboard()
 G = Ground()
