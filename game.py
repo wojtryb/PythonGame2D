@@ -5,6 +5,7 @@ from Player import Player
 from Keyboard import Keyboard
 from Ground import Ground
 
+
 def myUpdate(P, G):
 	
 	P.checkStaticFriction()
@@ -17,10 +18,10 @@ def myUpdate(P, G):
 
 pygame.init()
 
-width = 1920
-heigth = 1080
+width = 1920  # 960
+height = 1080  # 540
 
-win = pygame.display.set_mode((width, heigth))
+win = pygame.display.set_mode((width, height))
 screen = pygame.display.set_caption("My Awesome Game")
 bg = pygame.image.load(os.path.join(os.getcwd(), "Assets", "bg1Art.png"))
 #bg = pygame.image.load(".Assets/bg1Art.png")
