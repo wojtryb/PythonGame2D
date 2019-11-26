@@ -18,12 +18,15 @@ def myUpdate(P, G):
 
 pygame.init()
 
-width = 1920  # 960
-height = 1080  # 540
+scale = 0.5  # 1 - trybus, 0.5 glos
+
+width = int(1920 * scale)
+height = int(1080 * scale)
 
 win = pygame.display.set_mode((width, height))
 screen = pygame.display.set_caption("My Awesome Game")
 bg = pygame.image.load(os.path.join(os.getcwd(), "Assets", "bg1Art.png"))
+bg = pygame.transform.rotozoom(bg, 0, scale)
 #bg = pygame.image.load(".Assets/bg1Art.png")
 
 K = Keyboard()
@@ -47,7 +50,7 @@ while run:
 	win.fill((0, 0, 0))
 	win.blit(bg, [0, 0]) #BACKGROUND - comment to get better performance
 
-	P.render(win)
+	P.render(win, scale)
 	pygame.display.update()
 
 pygame.quit

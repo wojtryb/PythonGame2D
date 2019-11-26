@@ -112,6 +112,6 @@ class Player:
 					s.stomp = False
 			s.y = heigth
 
-	def render(s, win):
+	def render(s, win, scale):
 		# pygame.draw.rect(win, (0, 255, 0), (s.x, s.y, s.w, s.h))
-		pygame.draw.rect(win, (255, 255, 255), (s.x-s.w/2, s.y-s.h, s.w, s.h))
+		pygame.draw.rect(win, (255, 255, 255), ((s.x-s.w/2)*scale, (s.y-s.h)*scale, (s.w)*scale, (s.h)*scale))
